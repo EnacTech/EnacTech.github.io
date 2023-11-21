@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './ComingSoon.css';
 
 const ComingSoon = () => {
 
