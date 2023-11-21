@@ -4,6 +4,7 @@
   "homepage": "https://enactech.github.io/enactus-main",
   "type": "module",
   "scripts": {
+    "predeploy": "bun run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
