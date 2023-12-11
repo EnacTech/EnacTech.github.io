@@ -17,7 +17,6 @@
 body {
   background-color: var(--primary-clr);
   color: var(--secondary-clr);
-  text-align: center;
 }
 
 a {
@@ -86,20 +85,20 @@ a {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
   min-height: 20dvh;
   margin-bottom: 10dvh;
 }
 
 .social {
-  font-size: 2rem;
-  margin-inline: 0.5rem;
+  font-size: 2.5rem;
+  margin-inline: 0.75rem;
 }
 
 .instagram:hover {
   color: #e1306c;
 }
+
 .instagram,
 .linkedin,
 .yt {
@@ -112,4 +111,47 @@ a {
 
 .yt:hover {
   color: #ff0000;
+}
+
+.header {
+  background-color: var(--enactus-grey);
+  padding-inline: 5rem;
+  min-height: 15dvh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 10dvh;
+}
+
+.logo img {
+  height: inherit;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  color: var(--primary-clr);
+  font-weight: 500;
+}
+
+.nav-links a {
+  transition: color 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+  color: var(--enactus-yellow);
+  opacity: 0.8;
+}
+
+.active {
+  color: var(--enactus-yellow);
+  background-color: #3d3b3b;
+  border-radius: 0.5rem;
 }
