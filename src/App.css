@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+  --primary-clr: #fafafa;
+  --secondary-clr: #151515;
+  --enactus-yellow: #fcc025;
+  --enactus-grey: #2f2e2e;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -8,12 +15,101 @@
 }
 
 body {
-  background-color: #fafafa;
-  color: #151515;
+  background-color: var(--primary-clr);
+  color: var(--secondary-clr);
   text-align: center;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.footer {
+  background-color: var(--enactus-grey);
+  color: var(--primary-clr);
+  min-height: 20dvh;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.footer div {
+  width: 31%;
+  padding-block: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-logo {
+  max-height: 18dvh;
+  height: 100%;
+  position: relative;
+}
+
+.footer-logo img {
+  max-height: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.init {
+  color: var(--enactus-yellow);
+}
+
+.footer-desc {
+  text-align: left;
+}
+
+.footer-desc h2,
+.footer-social h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-block: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-social h2 p,
+.footer-desc p {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: -0.05rem;
+  word-spacing: 0.1rem;
+  color: var(--primary-clr);
+}
+
+.footer-social h2 {
+  color: var(--enactus-yellow);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 20dvh;
+  margin-bottom: 10dvh;
+}
+
+.social {
+  font-size: 2rem;
+  margin-inline: 0.5rem;
+}
+
+.instagram:hover {
+  color: #e1306c;
+}
+.instagram,
+.linkedin,
+.yt {
+  transition: color 0.2s ease-in-out;
+}
+
+.linkedin:hover {
+  color: #0077b5;
+}
+
+.yt:hover {
+  color: #ff0000;
 }
