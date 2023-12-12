@@ -63,6 +63,10 @@ a {
   text-align: left;
 }
 
+.footer-social {
+  height: 100%;
+}
+
 .footer-desc h2,
 .footer-social h2 {
   font-weight: 600;
@@ -147,11 +151,12 @@ a {
 
 .nav-links a:hover {
   color: var(--enactus-yellow);
-  opacity: 0.8;
+  opacity: 0.87;
 }
 
 .active {
   color: var(--enactus-yellow);
-  background-color: #3d3b3b;
-  border-radius: 0.5rem;
+  /* background-color: #3d3b3b;
+  border-radius: 0.5rem; */
+  font-weight: 600;
 }
