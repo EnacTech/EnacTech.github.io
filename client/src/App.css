@@ -5,6 +5,7 @@
   --secondary-clr: #151515;
   --enactus-yellow: #fcc025;
   --enactus-grey: #2f2e2e;
+  --enactus-chrome: #faae32;
 }
 
 * {
@@ -159,4 +160,95 @@ a {
   /* background-color: #3d3b3b;
   border-radius: 0.5rem; */
   font-weight: 600;
+}
+
+.carousel-images {
+  position: relative;
+  border-radius: 10px;
+  height: 85dvh;
+  max-width: 90dvw;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images img {
+  width: 99%;
+  height: 99%;
+  border-radius: 8px;
+  border: #fcc0258e solid 2px;
+}
+
+.slide_direction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  background-color: #fcc0258e;
+  color: var(--primary-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 10px;
+  height: 25px;
+  width: 25px;
+}
+
+.left:hover,
+.right:hover {
+  cursor: pointer;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 8px;
+}
+
+.carousel-indicator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  width: fit-content;
+}
+
+.carousel-indicator:hover {
+  background-color: var(--enactus-grey);
+  border-radius: 20px;
+}
+
+.carousel-indicator:hover .dot {
+  background-color: var(--primary-clr);
+}
+
+.dot {
+  background-color: var(--enactus-grey);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dot:hover {
+  cursor: pointer;
+  background-color: var(--enactus-chrome) !important;
+}
+
+.active__carousel {
+  background-color: var(--enactus-yellow) !important;
+}
+
+.gallery {
+  padding-inline: 3rem;
+  margin-block: 1rem;
 }
