@@ -1,4 +1,6 @@
 import './App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header.tsx';
 import Footer from './components/Footer.tsx';
@@ -23,7 +25,8 @@ function App() {
           <Route path='/contact' element={<ContactUsScreen />} />
         </Routes>
         <Footer />
-      </BrowserRouter>  
+        <ToastContainer />
+      </BrowserRouter>
     </>
   );
 }
