@@ -18,6 +18,7 @@ const Header = () => {
         {navigation.map((item) => {
           return (
             <NavLink
+              key={item.name}
               to={item.path}
               className={({ isActive }) => (isActive ? 'active' : '')}
             >

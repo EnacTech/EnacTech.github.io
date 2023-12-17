@@ -1,14 +1,43 @@
-import { toast } from "react-toastify";
+import axios from 'axios';
+import { toast } from 'react-toastify';
+
+const FORM_ENDPOINT = `http://localhost:1337/api/messages`;
 
 const ContactForm = () => {
-  const submitHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Message sent successfully!");
+    console.log('Form submitted');
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      data: {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message'),
+      },
+    };
+    axios
+      .post(FORM_ENDPOINT, data)
+      .then((res) => {
+        console.log(res);
+        toast.success('Message sent successfully!');
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error(
+          'There was an error sending your message. Please try again.',
+        );
+      });
+    formData.set('name', '');
+    formData.set('email', '');
+    formData.set('subject', '');
+    formData.set('message', '');
   };
+
   return (
     <>
       <div className='contact-form'>
-        <form action='' method='post'>
+        <form action={FORM_ENDPOINT} method='post' onSubmit={submitHandler}>
           <div className='form-group'>
             <input
               type='text'
@@ -46,7 +75,7 @@ const ContactForm = () => {
               placeholder='Enter you message here...'
             ></textarea>
           </div>
-          <button type='submit' className='form-btn' onClick={submitHandler}>
+          <button type='submit' className='form-btn'>
             Send Message
           </button>
         </form>
