@@ -326,6 +326,7 @@ a {
   font-size: 1.33vw;
   font-weight: 700;
   color: var(--primary-clr);
+  text-shadow: 0 0 20px var(--enactus-grey);
   background-color: var(--enactus-yellow);
   border: 1px solid var(--enactus-yellow);
   margin-block: 0.7rem;
@@ -381,4 +382,52 @@ h1 {
   font-size: 1.06dvw;
   font-weight: 700;
   color: var(--enactus-yellow);
+}
+
+.hero {
+  color: var(--primary-clr);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('./assets/hero.webp') no-repeat center center/cover fixed;
+}
+
+.enac-name {
+  color: var(--primary-clr);
+  letter-spacing: -0.4667dvw;
+  margin: 0;
+  font-size: 5dvw;
+  font-weight: 700;
+  font-family: 'Source Sans 3', sans-serif;
+  position: relative;
+  transform: translate(55%, -100%);
+}
+
+.hero-logo {
+  width: 15dvw;
+  margin-block: 1rem;
+}
+
+.enac-name span {
+  display: block;
+  font-size: 2dvw;
+  font-weight: 400;
+  text-align: right;
+  letter-spacing: 0;
+  transform: translate(0, -75%);
+}
+
+.logo-holder {
+  position: relative;
+  transform: translate(-55%, 0);
+}
+
+.hero h1 {
+  font-size: 6dvw;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
 }

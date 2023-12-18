@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
@@ -36,7 +37,13 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className='contact-form'>
+      <motion.div
+        className='contact-form'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
         <form action={FORM_ENDPOINT} method='post' onSubmit={submitHandler}>
           <div className='form-group'>
             <input
@@ -79,7 +86,7 @@ const ContactForm = () => {
             Send Message
           </button>
         </form>
-      </div>
+      </motion.div>
     </>
   );
 };

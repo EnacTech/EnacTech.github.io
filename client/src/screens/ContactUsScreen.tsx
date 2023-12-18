@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ContactForm from '../components/ContactForm';
 import Contact from '../assets/contact.svg';
@@ -8,7 +9,13 @@ const ContactUsScreen = () => {
   return (
     <>
       <div className='contact'>
-        <div className='contact-info'>
+        <motion.div
+          className='contact-info'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <h1>Get in touch...</h1>
           <p>
             If you are interested in collaborating with us or have any queries,
@@ -42,7 +49,7 @@ const ContactUsScreen = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
         <ContactForm />
       </div>
     </>
